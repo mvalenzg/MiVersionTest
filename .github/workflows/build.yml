@@ -50,13 +50,13 @@ jobs:
 
       - name: Build API
         run: |
-          dotnet build src/MyApi/MyApi.csproj \
+          dotnet build src/Api/Api.csproj \
           --configuration Release \
           /p:Version=${{ steps.gitversion.outputs.SemVer }}
 
       - name: Publish API
         run: |
-          dotnet publish src/MyApi/MyApi.csproj \
+          dotnet publish src/Api/Api.csproj \
           --configuration Release \
           --output ./publish \
           /p:Version=${{ steps.gitversion.outputs.SemVer }}

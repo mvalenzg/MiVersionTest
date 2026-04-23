@@ -6,13 +6,13 @@ branches:
   main:
     regex: ^main$
     increment: Patch
-    label: ''
+    tag: ''
     is-main-branch: true
 
   dev:
     regex: ^dev(elop)?$
     increment: Minor
-    label: beta
+    tag: beta
     source-branches:
       - feature
       - release
@@ -20,7 +20,7 @@ branches:
   release:
     regex: ^release[/-]
     increment: Patch
-    label: rc
+    tag: rc
     is-release-branch: true
     source-branches:
       - dev
@@ -28,6 +28,6 @@ branches:
   feature:
     regex: ^feat[/-]|^feature[/-]
     increment: Minor
-    label: alpha
+    tag: alpha
     source-branches:
       - dev

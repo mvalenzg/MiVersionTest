@@ -7,7 +7,6 @@ branches:
     regex: ^main$
     increment: Patch
     tag: ''
-    is-main-branch: true
 
   dev:
     regex: ^dev(elop)?$
